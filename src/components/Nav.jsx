@@ -58,26 +58,27 @@ const nav = () => {
             </button>
             <div
               style={showlogin ? { display: "initial" } : { display: "none" }}
-              className="Loginbuttons w-28 mt-7 flex items-center gap-10"
+              className="Loginbuttons bg-white mt-5"
             >
               <button
-                className="text-[#00A5EC] border-[1px] border-[#00A5EC] w-28 h-fit rounded text-[1.15vw] flex flex-col justify-start items-center"
+                className="text-[#00A5EC] border-[1px] border-[#00A5EC] w-28 h-fit rounded text-[1.15vw] flex flex-col justify-start items-center "
                 onClick={studentsignin}
               >
                 As Student
               </button>
               <br />
               <button
-                className="text-[#00A5EC] border-[1px] border-[#00A5EC] w-28 h-fit rounded text-[1.15vw] flex flex-col justify-start items-center"
+                className="text-[#00A5EC] border-[1px] border-[#00A5EC] w-28 h-fit rounded text-[1.15vw] flex flex-col justify-start items-center "
                 onClick={employeesignin}
               >
                 As Employee
               </button>
               <button
-                className="text-[#00A5EC] border-[1px] border-[#00A5EC] w-fit h-fit rounded text-[1.15vw] flex flex-col justify-start items-center mt-3  "
+                className="text-[#00A5EC] border-[1px] border-[#00A5EC] w-fit h-fit rounded text-[1.15vw] mt-4 text-wrap"
                 onClick={Studentforgetpass}
               >
-                Forgot Password(Student)
+                Forgot Password <br />
+                (Student)
               </button>
             </div>
           </div>
