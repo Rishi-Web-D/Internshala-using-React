@@ -10,8 +10,8 @@ import {
 import axios from "../../config/axios";
 export const asyncsignin = (user) => async (dispatch, getState) => {
   try {
-    await axios.post("/user/student/signin", user);
-    console.log("Sending user details", user);
+    const { data } = await axios.post("/user/student/signin", user);
+    console.log("login response >>>> ", data);
     dispatch(asynccurrentUser());
   } catch (error) {
     console.log(error.response.data);
@@ -20,7 +20,7 @@ export const asyncsignin = (user) => async (dispatch, getState) => {
 export const asynccurrentUser = () => async (dispatch, getState) => {
   try {
     const { data } = await axios.post("/user/student");
-    console.log(data.student);
+    // console.log(data.student);
     dispatch(saveStudent(data.student));
   } catch (error) {
     console.log(error.response.data);
